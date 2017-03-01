@@ -1,84 +1,97 @@
-var image = {};
+var item = {};
 
-createCard({
-    src:'https://unsplash.it/210/210?image=100',
-    caption: 'Unkown Image',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=100',
+    title: 'Unkown Image',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=200',
-    caption: 'Mystery',
-    maker: 'HBakerStudio',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=200',
+    title: 'Mystery',
+    seller: 'HBakerStudio',
     price: '$17.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=300',
-    caption: 'Something',
-    maker: 'judysJunktion',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=300',
+    title: 'Something',
+    seller: 'judysJunktion',
     price: '$94.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=400',
-    caption: 'Something',
-    maker: 'SuxansUnbreakable',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=400',
+    title: 'Something',
+    seller: 'SuxansUnbreakable',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=500', 
-    caption: 'Something',
-    maker: 'StutzyVintageGames',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=500',
+    title: 'Something',
+    seller: 'StutzyVintageGames',
     price: '$19.99'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=600',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=600',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=700',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=700',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=800',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=800',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=900',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=900',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210image=1000',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
-    price: '$32.00'    
-});
-createCard({
-    src:'https://unsplash.it/210/210?image=250',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=1000',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
-createCard({
-    src:'https://unsplash.it/210/210?image=350',
-    caption: 'Something',
-    maker: 'Dogbotzboneyard',
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=250',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
+    price: '$32.00'
+});
+createResultCard({
+    image: 'https://unsplash.it/210/210?image=350',
+    title: 'Something',
+    seller: 'Dogbotzboneyard',
     price: '$32.00'
 });
 
-function createCard(image) {
-     var card = `<div class="card">
-        <img src="${image.src}" alt="Image" />
-            <h5 class-"card-option">${image.caption}</h5>
-            <h5 class-"maker-price">${image.maker} ${image.price}</h5>
+// function createResult(result) {
+//     var card = `<div class="card">
+//         <img src="${result.image}" alt="Image" />
+//             <h5 class-"card-option">${result.title}</h5>
+//             <h5 class-"maker-price">${result.seller} ${result.price}</h5>
+//         </div>`;
+
+//     document.querySelector('#results').innerHTML += card;
+// }
+
+function createResultCard(item) {
+  var card = document.createElement('div');
+  card.classList.add('col-sm-4');
+        var item = `<div class="card">
+        <img src="${item.image}" alt="Image" />
+        <h5 class-"card-title">${item.title}</h5>
+        <h5 class-"maker-price">${item.seller} ${item.price}</h5>
         </div>`;
-        
-        document.querySelector('#results').innerHTML += card;
+        var blue = document.querySelector('.row').appendChild(card)
+        document.querySelector('#results').innerHTML += item;
+        console.log(blue)
 }
