@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+body {
+    background: whitesmoke;
+}
+.container {
+    margin: 0;
+}
+.container-fluid {
+    background-color: white;
+}
+a {
+    color: blue;
+}
+.panel {
+    margin-bottom: 0px;
+}
+.panel-body {
+    display: flex;
+    flex-direction: row;
+}
+.panel-body p {
+    padding: 0px 20px; 
+    color: gray;
+}
+ul li:last-child {
+    border: solid;
+    margin: 10px;
+}
+.navbar-brand {
+    font: arial;
+    color: orange;
+}
+p {
+color: blue;
+}
+label {
+    color: blue;
+}
+label input #optionsRadios2{
+    color: blue;
+}
+.border {
+    padding: 20px;
+    border-style: solid;
+    border-width: .5%;
+    border-color: black;
+    background-color: white;
+}
+.col-sm-2 {
+    background-color: white;
+}
+.card {
+    max-width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    background: #ffffff;
+    display: inline-block;
+}
+.card-caption {
+    text-align: center;
+}
+
+
+
+/*@media (min-width: 1400px) {
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}*/

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,fetch,Array.prototype.includes"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+    <header>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/?ref=lgo">Etsy</a>
+    </div>
+
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sell on Etsy</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Sign in</a></li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid --> 
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <p>Clothing & Accessories</p>
+    <p>Jewelry</p>
+    <p>Craft Supplies & Tools</p>
+    <p>Weddings</p>
+    <p>Entertainment</p>
+    <p>Home & Living</p>
+    <p>Kids & Baby</p>
+    <p>Vintage</p>
+  </div>
+</div>
+</nav>
+</header> 
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column col-sm-3">
+        <h5>Show results for:</h5>
+        <div class="border">
+          <h5>All Categories</h5>
+          <p>Toys & Games</p>
+          <p>Art & Collectibles</p>
+          <p>Craft Supplies & Tools</p>
+          <p>Home & Living</p>
+          <p>Paper & Party Supplies</p>
+          <p>Books, Movies & Music</p>
+          <p>Accessories</p>
+          <p>Clothing</p>
+          <p>Electronics & Accessories</p>
+          <p>Jewelry</p>
+          <p>Weddings</p>
+          <p>Bags & Purses</p>
+        </div>
+        <h5>Refine your search</h5>
+        <div class="border">
+          <h5>Shop location</h5>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Anywhere
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              United States
+            </label>
+          </div>
+        <p>Choose a custom location</p>
+        <hr/></hr/>
+        <h5>Item type</h5>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                All items
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Handmade
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Vintage
+            </label>
+          </div>
+          <hr/></hr/>
+          <h5>Price ($)</h5>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Any price
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Under $25
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              $25 to $50
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              $50 to $100
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Over $100
+            </label>
+          </div>
+          <hr/>
+          <input type="text" class="form-control" placeholder="Low">
+          <p>to</p>
+          <input type="text" class="form-control" placeholder="High">
+          <input type="text" class="form-control">
+          <hr/>
+          <h5>Filter by color</h5>
+          <div class="filter-color">
+            <ul class="list-inline">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          
+        
+        </div>
+      </div>
+        <div id="results" class="column col-sm-9">
+          <h5><a href="#">Did you mean the shop <span>boardgames</span>?</a></h5>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/global.js"></script>
+</body>
+</html>
+
+
+
+<!--<div class="clear">
+            <ul class="list-inline">
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=f40b32" title="View only red items" style="background-color: #f40b32;" class="swatch display-block red" aria-label="View only red items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=ff7f00" title="View only orange items" style="background-color: #ff7f00;" class="swatch display-block orange" aria-label="View only orange items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=f3cc0c" title="View only yellow items" style="background-color: #f3cc0c;" class="swatch display-block yellow" aria-label="View only yellow items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=0ac20a" title="View only green items" style="background-color: #0ac20a;" class="swatch display-block green" aria-label="View only green items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=0cccf3" title="View only blue items" style="background-color: #0cccf3;" class="swatch display-block blue" aria-label="View only blue items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=a60cf3" title="View only purple items" style="background-color: #a60cf3;" class="swatch display-block purple" aria-label="View only purple items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=000000" title="View only black items" style="background-color: #000000;" class="swatch display-block black" aria-label="View only black items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item vertical-align-bottom mr-xs-0">
+        <a rel="nofollow" href="https://www.etsy.com/search/vintage/toys_and_games?q=board+games&amp;explicit=1&amp;locationQuery=6252001&amp;color=ffffff" title="View only white items" style="background-color: #ffffff;" class="swatch display-block white" aria-label="View only white items">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+</ul>
+        </div>-->
