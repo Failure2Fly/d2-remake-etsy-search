@@ -1,97 +1,41 @@
-var item = {};
+// var results = [];
+// var result = [];
 
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=100',
-    title: 'Unkown Image',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=200',
-    title: 'Mystery',
-    seller: 'HBakerStudio',
-    price: '$17.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=300',
-    title: 'Something',
-    seller: 'judysJunktion',
-    price: '$94.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=400',
-    title: 'Something',
-    seller: 'SuxansUnbreakable',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=500',
-    title: 'Something',
-    seller: 'StutzyVintageGames',
-    price: '$19.99'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=600',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=700',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=800',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=900',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=1000',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=250',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
-createResultCard({
-    image: 'https://unsplash.it/210/210?image=350',
-    title: 'Something',
-    seller: 'Dogbotzboneyard',
-    price: '$32.00'
-});
+getInfo();
 
-// function createResult(result) {
-//     var card = `<div class="card">
-//         <img src="${result.image}" alt="Image" />
-//             <h5 class-"card-option">${result.title}</h5>
-//             <h5 class-"maker-price">${result.seller} ${result.price}</h5>
-//         </div>`;
-
-//     document.querySelector('#results').innerHTML += card;
-// }
-
-function createResultCard(item) {
-  var card = document.createElement('div');
-  card.classList.add('col-sm-4');
-        var item = `<div class="card">
-        <img src="${item.image}" alt="Image" />
-        <h5 class-"card-title">${item.title}</h5>
-        <h5 class-"maker-price">${item.seller} ${item.price}</h5>
-        </div>`;
-        var blue = document.querySelector('.row').appendChild(card)
-        document.querySelector('#results').innerHTML += item;
-        console.log(blue)
+function getInfo() {
+    fetch('https://thinksaydo.com/tiyproxy.php?https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('board games') + '&includes=Images,Shop')
+        .then(response => response.json())
+        .then(data => {
+            results = data;
+            console.log(searchResults)
+            results.forEach(result); {
+                createResultCard(result);
+            }
+        });
 }
+
+function createResultCard(result) {
+
+    var card = `<div class="col-sm-4 col-md-3">
+        <div class="card">
+            <img src="${result.image.url_75x75}"/>
+            <div class="card-caption">
+                <div>${result.description}</div>
+                <div>
+                    <span class="text-muted">${result.shop_name}</span>
+                    <span class="text-success pull-right">${result.price}</span>
+                </div>
+            </div>
+        </div>
+    </div>`;
+    document.querySelector('#cards').innerHTML += card;
+};
+
+
+// function handleKeyPress(e){
+//  var key=e.keyCode || e.which;
+//   if (key==13){
+//      searching();
+//   }
+// }

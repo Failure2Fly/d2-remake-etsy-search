@@ -75,12 +75,10 @@ label input #optionsRadios2{
 .card-caption {
     text-align: center;
 }
+.pagination {
+    float: center;
+}
 
 
 
-/*@media (min-width: 1400px) {
-    .container {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-}*/
+
